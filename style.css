@@ -6,13 +6,57 @@
     box-sizing: border-box;
 }
 
+
+/* estilos de body */
+
+.body{
+    font-family: opensans, sans-serif;
 /* estilos de header */
+}
+
+.header{
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header__logo{
+
+
+
+}
+
+.header__nav{
+
+
+}
+.header__menu{
+    display: flex;
+    text-align: center;
+}
+
+.header__menu-link{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.header__menu-item{
+    list-style: none;
+    margin: 1em;
+}
+
+.header__menu-item:hover{
+   color: #77875b
+}
+
 
 
 /* estilos de gallery */
 
 .gallery {
-    margin: .5em;2
+    margin: .5em;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(5, 1fr);
@@ -32,29 +76,48 @@
     height: auto;
 }
 
-/* para que los hijos más de un column/row en el grid, para que crezcan. */
+/* Modificadores para que ocupan más de un column/row en el grid (se podría utilizar `.gallery__link:nth-child()`para selleccionar el hijo al que hay que aplicarlo. */
 
-.gallery__link:nth-child(3) {
+.gallery__link--doblealtura {
     grid-row-start: span 2;
 }
 
-.gallery__link:nth-child(12) {
-    grid-row-start: span 2;
-}
 
-.gallery__link:nth-child(5) {
+.gallery__link--doble {
     grid-column-end: span 2;
     grid-row-end: span 2;
 }
 
-.gallery__link:nth-child(9) {
-    grid-column-end: span 2;
-    grid-row-end: span 2;
-}
-
-.gallery__link:nth-child(17) {
+.gallery__link--dobleancho {
     grid-column-start: span 2;
 }
+
+
+/* estilos del footer */
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 5em;
+    
+}
+
+.footer__paragraph{
+    margin-top: 1em;
+    color: #848484;
+    width: 25em;
+}
+.footer__nav{}
+
+.footer__rights{
+    font-size: smaller;
+    color: #848484;
+    margin-bottom: 3em;
+}
+
 
 /* MQ */
 
