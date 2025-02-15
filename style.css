@@ -1,0 +1,73 @@
+/* estilos de reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* estilos de header */
+
+
+/* estilos de gallery */
+
+.gallery {
+    margin: .5em;2
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-auto-flow: row;
+    gap: .5em;
+    justify-content: center;
+
+}
+
+.gallery__link {
+    display: flex;
+    object-fit: cover;
+}
+
+.gallery__img {
+    width: 100%;
+    height: auto;
+}
+
+/* para que los hijos más de un column/row en el grid, para que crezcan. */
+
+.gallery__link:nth-child(3) {
+    grid-row-start: span 2;
+}
+
+.gallery__link:nth-child(12) {
+    grid-row-start: span 2;
+}
+
+.gallery__link:nth-child(5) {
+    grid-column-end: span 2;
+    grid-row-end: span 2;
+}
+
+.gallery__link:nth-child(9) {
+    grid-column-end: span 2;
+    grid-row-end: span 2;
+}
+
+.gallery__link:nth-child(17) {
+    grid-column-start: span 2;
+}
+
+/* MQ */
+
+@media screen and (max-width: 680px){
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+    }
+
+    /* para mover la última imagen al espacio que queda libre al aplicar el MQ*/
+    .gallery__link:nth-child(21) {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+}
+
