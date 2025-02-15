@@ -4,18 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/92ec900005.js" crossorigin="anonymous"></script>
     <title>Asíncrono 1: BEM</title>
 
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/main.css">
+
 </head>
 
-<body>
+<body class="body">
+
+
+    <!--HEADER -->
 
     <header class="header">
 
-
         <img class="header__logo" src="./img/Logo-dark.png" alt="Stockholm logo">
+
         <nav class="header__nav">
             <ul class="header__menu">
                 <a class="header__menu-link" href="./layout-BEM.html">
@@ -30,14 +36,30 @@
             </ul>
         </nav>
 
-        <button class="header__button">
-            <aside class="sidebar"> </aside>
-        </button>
-
-
-
+        <button class="header__button"> <i class="fa-solid fa-bars fa-lg"></i> </button>
 
     </header>
+
+    <!-- El ASIDE esta desactivado con "display:none" Se debería activar al pulsar el header__button-->
+
+    <aside class="sidebar">
+
+        <img class="sidebar__logo" src="./img/Footer-logo.png" alt="Stockholm logo">
+
+        <p class="sidebar__paragraph">Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus rutrum
+            nulla ut metus varius laoreet.</p>
+
+        <img class="sidebar__img" src="./img/Side-area-img-200x300.jpg">
+
+        <!-- = nav del footer -->
+        <nav class="footer__nav">
+            <a class="footer__link" href="#"><i class="fa-brands fa-pinterest"></i> </a>
+            <a class="footer__link" href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a class="footer__link" href="#"><i class="fa-brands fa-instagram"></i> </a>
+        </nav>
+    </aside>
+
+    <!--MAIN -->
 
     <main class="gallery">
 
@@ -107,6 +129,9 @@
 
     </main>
 
+
+    <!--FOOTER -->
+
     <footer class="footer">
 
         <img class="footer__logo" src="./img/Footer-logo.png" alt="Stockholm logo">
@@ -116,21 +141,15 @@
             metus varius laoreet amet orci.
         </p>
 
-
         <nav class="footer__nav">
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa fa--pinterest"></i>
-            <i class="fa fa--instagram"></i>
+            <a class="footer__link" href="#"><i class="fa-brands fa-pinterest"></i> </a>
+            <a class="footer__link" href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a class="footer__link" href="#"><i class="fa-brands fa-instagram"></i> </a>
         </nav>
 
         <p class="footer__rights"> © 2021 Qode Interactive, All Rights Reserved</p>
-    
 
     </footer>
-
-
-
-
 
 </body>
 
